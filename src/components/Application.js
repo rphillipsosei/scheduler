@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "components/Application.scss";
 import Button from "components/Button";
 import DayList from "components/DayList";
+import InterviewerList from "./InterviewerList";
 
 
 
@@ -52,6 +53,7 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
+        <InterviewerList />
         <Button confirm>Confirm</Button>
         <Button danger>Cancel</Button>     
       </section>
