@@ -3,7 +3,7 @@ import InterviewerListItem from "components/InterviewerListItem"
 
 import "./InterviewerList.scss";
 
-export default function InterviewerList(props, value, onChange) {
+export default function InterviewerList(props) {
 console.log("interviewList:", props)
 
  
@@ -19,8 +19,8 @@ console.log("interviewList:", props)
             key = {interviewer.id}
             name = {interviewer.name}
             avatar = {interviewer.avatar}
-            selected = {interviewer.id === value}
-            setInterviewer={() => onChange(props.id)}
+            selected = {interviewer.id === props.value}
+            setInterviewer = {() => props.onChange(interviewer.id)}
           />
         )
       }
