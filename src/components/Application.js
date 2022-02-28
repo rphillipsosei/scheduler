@@ -5,7 +5,7 @@ import "components/Application.scss";
 import DayList from "components/DayList";
 import Appointment from "./Appointment";
 import { getAppointmentsForDay, getInterview } from "helpers/selectors";
-
+import useVisualMode from "hooks/useVisualMode";
 
 
 export default function Application(props) {
@@ -59,12 +59,7 @@ useEffect(() => {
       />
     );
   });
-  // useEffect(() => {
-  //   const days = `/api/days`;
-  //   axios.get(days).then((response) => {
-  //     state.setDays(response.data);
-  //   });
-  // }, []);
+
 
   return (
     <main className="layout">
