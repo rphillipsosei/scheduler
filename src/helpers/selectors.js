@@ -15,18 +15,20 @@ export function getAppointmentsForDay(state, day) {
   return result;
 }
 
-const interviewers = {
-  "1": {  
-    "id": 1,
-    "name": "Sylvia Palmer",
-    "avatar": "https://i.imgur.com/LpaY82x.png"
-  },
-  "2": {
-    id: 2,
-    name: "Tori Malcolm",
-    avatar: "https://i.imgur.com/Nmx0Qxo.png"
+
+export function getInterviewersForDay(state, day) {
+  const result = [];
+  const dayFilter = state.days.filter((days) => days.name === day)
+
+  if (!dayFilter[0]) return result;
+  for (const element of dayFilter[0].interviewers) {
+    result.push(state.interviewers[element]);
   }
-}
+  
+  return result;
+};
+
+
 
 
 export function getInterview(state, interview) {
@@ -39,3 +41,6 @@ export function getInterview(state, interview) {
     interviewer: state.interviewers[interview.interviewer]
   }
 }
+
+
+
