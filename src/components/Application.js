@@ -20,7 +20,7 @@ export default function Application(props) {
       [id]: appointment,
     };
 
-    console.log("INTERVIEW", interview)
+   
     return axios
       .put(`/api/appointments/${id}`, {interview})
       .then((resp) => {
@@ -29,11 +29,23 @@ export default function Application(props) {
           appointments,
         });
       })
-      // .catch((err) => {
-      //   alert("There was an error adding your appointmnent");
-      //   console.error(err);
-      // });
-  }
+  };
+
+function cancelInterview(id) {
+const appointment = {
+  ...state.appointments[id], 
+    interview: null
+}
+const appointments = {
+  ...state.appointments,
+  [id]:appointment
+}
+
+return axios
+.delete(`/api/appointments/${id}`)
+.then(() => setState({...state, appointments}))
+};
+
 
   const [state, setState] = useState({
     day: "Monday",
