@@ -22,7 +22,8 @@ export default function Application(props) {
       [id]: appointment,
     };
 
-    return axios.put(`/api/appointments/${id}`, { interview }).then((resp) => {
+    return axios.put(`/api/appointments/${id}`, { interview })
+    .then((resp) => {
       setState({
         ...state,
         appointments,
