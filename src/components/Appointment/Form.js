@@ -10,6 +10,7 @@ export default function Form(props) {
     setStudent("");
     setInterviewer("");
   };
+  
 
   const cancel = () => {
     reset();
@@ -21,10 +22,10 @@ export default function Form(props) {
       setError("Student name cannot be blank");
       return;
     }
-    if (interviewer === null) {
-      setError("Please select an interviewer");
-      return;
-    }
+    // if (interviewer === null) {
+    //   setError("Please select an interviewer");
+    //   return;
+    // }
     setError("");
     props.onSave(student, interviewer);
   }
@@ -37,9 +38,10 @@ export default function Form(props) {
             className="appointment__create-input text--semi-bold"
             name="name"
             type="text"
-            placeholder={props.student}
+            placeholder="Enter Student Name"
             value={student}
             onChange={(event) => setStudent(event.target.value)}
+            data-testid="student-name-input"
           />
         </form>
         <section className="appointment_validation">{error}</section>
