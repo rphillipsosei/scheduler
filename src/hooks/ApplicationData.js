@@ -62,6 +62,21 @@ function cancelInterview(id) {
     });
   }, []);
 
-  return { state, setDay, bookInterview, cancelInterview };
+
+  const countSpots = (state, day) => {
+    const currentDay = state.days.find((dayItem) => dayItem.name === day);
+    const appointmentIds = currentDay.appointments;
+  
+    const interviewsForTheDay = appointmentIds.map(
+      (id) => state.appointments[id].interview
+    );
+  
+    const emptyInterviewsForTheDay = interviewsForTheDay.filter((interview) => !interview);
+    const spots = emptyInterviewsForTheDay.length;
+  
+    return spots;
+  };
+
+  return { state, setDay, bookInterview, cancelInterview, countSpots };
 
 };
