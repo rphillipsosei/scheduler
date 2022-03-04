@@ -3,6 +3,8 @@ import DayListItem from "components/DayListItem"
 
 import "./DayList.scss";
 
+
+//returns DayList view
 export default function DayList({days, value, onChange}) {
     return (
         <ul>

@@ -47,6 +47,7 @@ function cancelInterview(id) {
     .delete(`/api/appointments/${id}`)
     .then(() => setState({ ...state, appointments }));
 }
+
   useEffect(() => {
     Promise.all([
       axios.get("/api/days"),
@@ -62,7 +63,7 @@ function cancelInterview(id) {
     });
   }, []);
 
-
+//updates number of remaining appointment slots in a day
   const countSpots = (state, day) => {
     const currentDay = state.days.find((dayItem) => dayItem.name === day);
     const appointmentIds = currentDay.appointments;

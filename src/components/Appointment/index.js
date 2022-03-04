@@ -8,9 +8,10 @@ import useVisualMode from "../../hooks/useVisualMode";
 import Confirm from "./Confirm"
 import Status from "./Status"
 import Error from "./Error";
-// import getInterviewersForDay from "helpers/selectors";
+
 
 export default function Appointment(props) {
+  //mode declarations
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const EDIT = "EDIT";
@@ -25,6 +26,7 @@ export default function Appointment(props) {
     props.interview ? SHOW : EMPTY
   );
 
+  
   function save(name, interviewer) {
     const interview = {
       student: name,

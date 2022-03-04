@@ -2,6 +2,7 @@ import React from "react";
 import "./DayListItem.scss";
 import classNames from "classnames";
 
+//returns DayListItem view
 export default function DayListItem(props) {
   
   const dayClass = classNames("day-list__item", {
@@ -9,7 +10,7 @@ export default function DayListItem(props) {
     "day-list__item--full": props.spots === 0
   });
 
-  
+  //outputs for user number of spots remaining
   function formatSpots() {
     if (props.spots === 0) {
       return "no spots remaining";

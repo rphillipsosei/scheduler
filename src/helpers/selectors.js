@@ -1,4 +1,6 @@
 export function getAppointmentsForDay(state, day) {
+ 
+ 
   if (!state.days) {
     return [];
   }
@@ -30,7 +32,7 @@ export function getInterviewersForDay(state, day) {
 
 
 
-
+//if there is an interview, populate the student name and interviewer name
 export function getInterview(state, interview) {
   
    if (!interview) {
