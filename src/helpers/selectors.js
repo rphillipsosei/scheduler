@@ -1,6 +1,4 @@
 export function getAppointmentsForDay(state, day) {
- 
- 
   if (!state.days) {
     return [];
   }
@@ -17,33 +15,26 @@ export function getAppointmentsForDay(state, day) {
   return result;
 }
 
-
 export function getInterviewersForDay(state, day) {
   const result = [];
-  const dayFilter = state.days.filter((days) => days.name === day)
+  const dayFilter = state.days.filter((days) => days.name === day);
 
   if (!dayFilter[0]) return result;
   for (const element of dayFilter[0].interviewers) {
     result.push(state.interviewers[element]);
   }
-  
+
   return result;
-};
-
-
+}
 
 //if there is an interview, populate the student name and interviewer name
 export function getInterview(state, interview) {
-  
-   if (!interview) {
+  if (!interview) {
     return null;
-  } 
-  
-   return {
-    student: interview.student, 
-    interviewer: state.interviewers[interview.interviewer]
   }
+
+  return {
+    student: interview.student,
+    interviewer: state.interviewers[interview.interviewer],
+  };
 }
-
-
-

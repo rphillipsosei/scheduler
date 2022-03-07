@@ -12,8 +12,8 @@ export default function Form(props) {
     setStudent("");
     setInterviewer("");
   };
-  
-//trigger reset and cancel action
+
+  //trigger reset and cancel action
   const cancel = () => {
     reset();
     props.onCancel();

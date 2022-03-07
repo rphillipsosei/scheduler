@@ -2,9 +2,8 @@ import React from "react";
 import "./InterviewerListItem.scss";
 import classNames from "classnames";
 
-//returns InterviewListItem view 
+//returns InterviewListItem view
 export default function InterviewListItem(props) {
-  
   const interviewerClass = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected,
   });

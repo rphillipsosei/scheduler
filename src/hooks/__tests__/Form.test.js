@@ -8,7 +8,6 @@ afterEach(cleanup);
 
 describe("Form", () => {
   const interviewers = [
-    
     {
       id: 1,
       name: "Sylvia Palmer",
@@ -16,7 +15,6 @@ describe("Form", () => {
     },
   ];
 
-  
   it("renders without student name if not provided", () => {
     const { getByPlaceholderText } = render(
       <Form interviewers={interviewers} />
@@ -24,8 +22,6 @@ describe("Form", () => {
     expect(getByPlaceholderText("Enter Student Name")).toHaveValue("");
   });
 
-  
-  
   it("renders with initial student name", () => {
     const { getByTestId } = render(
       <Form interviewers={interviewers} student="Lydia Miller-Jones" />
@@ -33,8 +29,6 @@ describe("Form", () => {
     expect(getByTestId("student-name-input")).toHaveValue("Lydia Miller-Jones");
   });
 
-  
-  
   it("validates that the student name is not blank", () => {
     const onSave = jest.fn();
 
@@ -47,8 +41,6 @@ describe("Form", () => {
     expect(onSave).not.toHaveBeenCalled();
   });
 
-  
-  
   it("calls onSave function when the name is defined", () => {
     const onSave = jest.fn();
 
@@ -67,5 +59,3 @@ describe("Form", () => {
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", null);
   });
 });
-
-

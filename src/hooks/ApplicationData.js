@@ -26,27 +26,26 @@ export default function useApplicationData(initial) {
       [id]: appointment,
     };
     return axios.put(`/api/appointments/${id}`, { interview }).then((resp) => {
-        setState({
-            ...state,
-            appointments,
-        });
+      setState({
+        ...state,
+        appointments,
+      });
     });
-    }
+  }
 
-function cancelInterview(id) {
+  function cancelInterview(id) {
     const appointment = {
-        ...state.appointments[id],
-        interview: null,
+      ...state.appointments[id],
+      interview: null,
     };
     const appointments = {
-        ...state.appointments,
-        [id]: appointment,
-        
+      ...state.appointments,
+      [id]: appointment,
     };
     return axios
-    .delete(`/api/appointments/${id}`)
-    .then(() => setState({ ...state, appointments }));
-}
+      .delete(`/api/appointments/${id}`)
+      .then(() => setState({ ...state, appointments }));
+  }
 
   useEffect(() => {
     Promise.all([
@@ -63,21 +62,22 @@ function cancelInterview(id) {
     });
   }, []);
 
-//updates number of remaining appointment slots in a day
+  //updates number of remaining appointment slots in a day
   const countSpots = (state, day) => {
     const currentDay = state.days.find((dayItem) => dayItem.name === day);
     const appointmentIds = currentDay.appointments;
-  
+
     const interviewsForTheDay = appointmentIds.map(
       (id) => state.appointments[id].interview
     );
-  
-    const emptyInterviewsForTheDay = interviewsForTheDay.filter((interview) => !interview);
+
+    const emptyInterviewsForTheDay = interviewsForTheDay.filter(
+      (interview) => !interview
+    );
     const spots = emptyInterviewsForTheDay.length;
-  
+
     return spots;
   };
 
   return { state, setDay, bookInterview, cancelInterview, countSpots };
-
-};
+}

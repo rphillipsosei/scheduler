@@ -1,7 +1,6 @@
 @import "styles/mixins.scss";
 @import "styles/variables.scss";
 
-
 .interviewers {
   &__item {
     @include button-inactive--opacity;
