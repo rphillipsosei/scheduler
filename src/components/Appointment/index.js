@@ -55,7 +55,7 @@ export default function Appointment(props) {
       });
   }
 
-  console.log("PROPS.INTERVIEW", props.interview);
+
   return (
     <article className="appointment">
       <Header time="12pm" />

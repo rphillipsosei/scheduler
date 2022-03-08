@@ -1,43 +1,30 @@
-<<<<<<< HEAD
-
 # Interview Scheduler Project
 
 Interview scheduler is a single-paged app which allows users to submit their names for appointmnet slots with interviewers.
 
 ## Set up
- Install dependecies with npm install
+
+Install dependecies with npm install
 
 ## Running Webpack Development Server
+
 npm start
 
-
 ## Running Jest Test Framework
+
 npm test
 
 ## Running Storybook Visual Testbed
+
 npm run storybook
 
-=======
-# Interview Scheduler Project
+## Running Scheduler API server
 
-Interview scheduler is a single-paged app which allows users to submit their names for appointmnet slots with interviewers.
-
-## Set up
- Install dependecies with npm install
-
-## Running Webpack Development Server
-```sh
-npm start
-```
-## Running Jest Test Framework
-```sh
-npm test
-```
-## Running Storybook Visual Testbed
-```sh 
-npm run storybook
-```
->>>>>>> 8f0dbe2560b1beac77b4c9a36fa6f8eeac78d370
+Clone repository at: https://github.com/lighthouse-labs/scheduler-api
+Install dependencies with npm install.
+Run with "npm start"
+Server will run at localhost:8001
+Test with "npm test"
 ## Dependencies
 
 - Axios
@@ -58,4 +45,5 @@ npm run storybook
 !["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
 =======
 !["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
->>>>>>> 8f0dbe2560b1beac77b4c9a36fa6f8eeac78d370
+
+> > > > > > > 8f0dbe2560b1beac77b4c9a36fa6f8eeac78d370
