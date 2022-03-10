@@ -7,6 +7,7 @@ export default function useVisualMode(initialMode) {
   //transitions between modes
   function transition(mode, replace) {
     if (replace) {
+      //if replace, the last item in the history becomes the mode
       const oldHistory = [...history];
       oldHistory[oldHistory.length - 1] = mode;
       setMode(mode);
@@ -16,7 +17,7 @@ export default function useVisualMode(initialMode) {
       setHistory([...history, mode]);
     }
   }
-  //reverts to previous mode in history
+  //if a history exists, the final item in the history is removed and the mode is set to the new final item
   function back() {
     if (history.length > 1) {
       const oldHistory = [...history];
