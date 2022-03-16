@@ -58,9 +58,9 @@ export default function Appointment(props) {
 
   return (
     <article className="appointment">
-      <Header time="12pm" />
+      <Header time={props.time} />
 
-      {}
+      
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
         <Show
@@ -83,6 +83,7 @@ export default function Appointment(props) {
           onSave={save}
         />
       )}
+      {mode === SAVING && <Status message="Saving..." />}
       {mode === DELETING && <Status message="Deleting..." />}
       {mode === CONFIRM && (
         <Confirm
@@ -98,7 +99,7 @@ export default function Appointment(props) {
         />
       )}
       {mode === ERROR_DELETING && (
-        <Error message="Error deleting appointment" onClose={() => back()} />
+        <Error message="Error deleting appointment" onClick={back} />
       )}
     </article>
   );

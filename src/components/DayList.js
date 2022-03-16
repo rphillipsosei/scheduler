@@ -4,7 +4,7 @@ import DayListItem from "components/DayListItem";
 import "./DayList.scss";
 
 //returns DayList view
-export default function DayList({ days, value, onChange }) {
+export default function DayList({ days, day:value, onChange }) {
   return (
     <ul>
       {days.map((day) => (
