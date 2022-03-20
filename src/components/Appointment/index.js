@@ -39,13 +39,13 @@ export default function Appointment(props) {
         transition(SHOW);
       })
       .catch((err) => {
-        transition(ERROR_SAVE, true);
+              transition(ERROR_SAVE, true);
         console.error(err);
       });
   }
 
   function deleteAppt() {
-    transition(DELETING);
+    transition(DELETING, true);
     props
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
@@ -95,7 +95,7 @@ export default function Appointment(props) {
       {mode === ERROR_SAVE && (
         <Error
           message="Error saving appointment"
-          onClick={() => transition(SHOW)}
+          onClick={back}
         />
       )}
       {mode === ERROR_DELETING && (
