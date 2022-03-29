@@ -1,6 +1,6 @@
 # Interview Scheduler Project
 
-Interview scheduler is a single-paged app which allows users to submit their names for appointmnet slots with interviewers.
+Interview scheduler is a single-paged app which allows users to submit their names for appointment slots with interviewers.
 
 ## Set up
 
