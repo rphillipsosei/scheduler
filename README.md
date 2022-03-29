@@ -41,9 +41,8 @@ Test with "npm test"
 
 !["Adding of student name for appointment slot"](https://github.com/rphillipsosei/scheduler/blob/master/docs/schedule-appt.png)
 
-<<<<<<< HEAD
-!["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
-=======
+
 !["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
 
-> > > > > > > 8f0dbe2560b1beac77b4c9a36fa6f8eeac78d370
+!["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
+
