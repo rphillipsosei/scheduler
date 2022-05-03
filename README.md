@@ -36,13 +36,13 @@ Test with "npm test"
 - React-scripts
 
 ## Final Product
-
+Main page of app
 !["Main page of app"](https://github.com/rphillipsosei/scheduler/blob/master/docs/home.png)
 
+Adding of student name for appointment slot
 !["Adding of student name for appointment slot"](https://github.com/rphillipsosei/scheduler/blob/master/docs/schedule-appt.png)
 
-
+Confirmation page before deletion
 !["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
 
-!["Confirmation page before deletion"](https://github.com/rphillipsosei/scheduler/blob/master/docs/delete-appt.png)
 
